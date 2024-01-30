@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="house rental system, system, house">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="author" content="Munaim Khan">
+	<title>House Rental System</title>
+<!--Fontawesome style sheet Start------------->
+	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/fontawesome.min.css"/>
+	
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
+<!--Fontawesome style sheet End------------->
+
+<!--Slick slider style sheet Start---------->
+	<link rel="stylesheet" href="css/slickslider/slick_slider.min.css"/>
+	<link rel="stylesheet" href="css/slickslider/slick.min.css"/>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--Slick slider style sheet End---------->
+
+<!--Main style sheet Start---------->
+	<link rel="stylesheet" type="text/css" href="mystyle.css"/>
+	<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+<!--Header Section Start------------->
+	<div class="top_header overflow ">
+		<div class="top_left col overflow">
+			<div class="logoimg overflow mt-5">
+				<h1>House Renting System</h1>
+			</div>
+			<div class="top_header_list overflow">
+				<ul>
+					<li>
+						<p>
+							<i class="fa-solid fa-phone ml-12"></i><span>Phone: +88017458574849</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<i class="fa-solid fa-envelope ml-4"></i>
+							</i><span>Email: easyrenting@gmail.com</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	
+	<nav class="topnav" id="navList">
+	<div class="topnav_bars" onclick="togglebtn()">
+		<i class="fa-solid fa-bars"></i>
+	</div>
+	  <ul>
+		<li>
+			<a href="index.html" id="active">home</a>
+		</li>
+		<li>
+			<a href="property_list.html">property list</a>
+		</li>
+		<li>
+			<a href="Admin/add_property.html">add property</a>
+		</li>
+		
+		<li>
+			<a href="help_support.html">help & support</a>
+		</li>
+	
+		<li>
+			<a href="signin.html">sign in</a>
+		</li>
+	  </ul>
+	</nav>
+<!--Header Section End------------->
+
+
+<!--Banner Section Start------------->	
+	​<div class="banner">  
+		<div><img src="https://ecdn.dhakatribune.net/contents/cache/images/900x505x1/uploads/dten/2020/08/issue-42-article-1-image-1-1596555579061.jpg" style="width:100%; height:600px">
+			<div class="centered"><h1>find your home</h1>
+			<form class="searchform" action="" method="">
+				<table>
+					<tr>
+						<td>
+							<select class="select">
+								<option>select area</option>
+								<option value="Khulshi">Aftabnagar</option>
+								<option value="Khulshi">Banasree</option>
+								<option value="Khulshi">Rampura</option>
+								<option value="Khulshi">Kilgaon</option>
+								<option value="Khulshi">Badda</option>
+							</select>
+						</td>
+						<td>
+							<select class="select">
+								<option>property type</option>
+								<option value="Flat/Appertment">flat/appertment</option>
+								<option value="Mess">mess</option>
+								<option value="Hostel">hostel</option>
+							</select>
+						</td>
+						<td>
+							<select class="select">
+								<option>maximum price</option>
+								<option value="10,000">10,000</option>
+								<option value="20,000">20,000</option>
+								<option value="30,000">30,000</option>
+								<option value="40,000">40,000</option>
+								<option value="40,000+">40,000+</option>
+							</select>
+						</td>
+						<td>
+							<select class="select">
+								<option>minimum price</option>
+								<option value="10,000">10,000</option>
+								<option value="20,000">20,000</option>
+								<option value="30,000">30,000</option>
+								<option value="40,000">40,000</option>
+								<option value="40,000+">40,000+</option>
+							</select>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<select class="select">
+								<option>maximum size</option>
+								<option value="800 sqft">800 sqft</option>
+								<option value="900 sqft">900 sqft</option>
+								<option value="1000 sqft">1000 sqft</option>
+								<option value="1200 sqft">1200 sqft</option>
+								<option value="1200 sqft">1200 sqft+</option>
+							</select>
+						</td>
+						<td>
+							<select class="select">
+								<option>minimum size</option>
+								<option value="800 sqft">800 sqft</option>
+								<option value="900 sqft">900 sqft</option>
+								<option value="1000 sqft">1000 sqft</option>
+								<option value="1200 sqft">1200 sqft</option>
+								<option value="1200 sqft">1200 sqft+</option>
+							</select>
+						</td>
+						<td>
+							<select class="select">
+								<option>bedroom</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5+">5+</option>
+							</select>
+						</td>
+						<td>
+							<select class="select">
+								<option>balcony</option>
+								<option value="Not Available">not available</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="3+">3+</option>
+							</select>
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="4" class="last_select">
+							<select class="select">
+								<option>built year</option>
+								<option value="1990 - 1995">1990 - 1995</option>
+								<option value="1995 - 2000">1995 - 2000</option>
+								<option value="2000-2005">2000 - 2005</option>
+								<option value="2005-2010">2005 - 2010</option>
+								<option value="2010+">2010+</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5">
+							<button type="submit" class="btn_success"><i class="fa-solid fa-magnifying-glass"></i><span>find</span></button>
+						</td>
+					</tr>
+				</table>
+			</form>
+			</div>
+		</div>
+	</div>
+<!--Banner Section End------------->	
+
+
+<!--Property List Section Start------------->	
+	<div class= "list overflow">
+		<h1 class="sub-title">property list</h1>
+		<div class="list_content slider">
+		<!--List Item 1------------->
+			<div class="list_item overflow">
+				<a href="property_details.html">
+					<div class="item_box overflow">
+						<div class="item_box_upper overflow">
+							<div class="item_upper item_category">
+								<p>Flat/Appertment</p>
+							</div>
+							<div class="item_upper item_pricebox overflow">
+								<div class="item_upper_left">
+									<p><i class="fa-solid fa-dollar-sign"></i><span>8000/month</span></p>
+								</div>
+								<div class="item_upper_left item_wlist_icon">
+									<p><i class="fa-solid fa-heart"></i></p>
+								</div>
+							</div>
+						</div>
+						<div class="list_img overflow">
+							<img src="https://roomvara.com/public/post/151121_FA2462_303DB9A790.jpg" alt="property image">
+						</div>
+						<div class="item_box_lower overflow"> 
+							<p>green mansion</p>
+							<h3><i class="fa-brands fa-accusoft"></i><span>Flat/Appertment</span></h3>
+							<p><i class="fa-solid fa-file-pen"></i>Posted on: March 3, 2024</p>
+							<p><i class="fa-solid fa-dollar-sign"></i>8000/mo <span>(Negotiable)</span></p>
+							<p><i class="fa-solid fa-location-dot"></i>Dhaka -Aftabnogor</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+		<!--List Item 2------------->
+			<div class="list_item overflow">
+				<a href="property_details.html">
+					<div class="item_box overflow">
+						<div class="item_box_upper overflow">
+							<div class="item_upper item_category">
+								<p>Flat/Appertment</p>
+							</div>
+							<div class="item_upper item_pricebox overflow">
+								<div class="item_upper_left">
+									<p><i class="fa-solid fa-dollar-sign"></i><span>8000/month</span></p>
+								</div>
+								<div class="item_upper_left item_wlist_icon">
+									<p><i class="fa-solid fa-heart"></i></p>
+								</div>
+							</div>
+						</div>
+						<div class="list_img overflow">
+							<img src="https://www.bdhousing.com/api/list/listings/100X100/240432/d23842e5f4d40572fda082be0d421ff8.jpg" alt="property image">
+						</div>
+						<div class="item_box_lower overflow"> 
+							<p>Rahim Mansion</p>
+							<h3><i class="fa-brands fa-accusoft"></i><span>Flat/Appertment</span></h3>
+							<p><i class="fa-solid fa-file-pen"></i>Posted on: May 3, 2024</p>
+							<p><i class="fa-solid fa-dollar-sign"></i>8000/mo <span>(Negotiable)</span></p>
+							<p><i class="fa-solid fa-location-dot"></i>Dhaka - Dhanmondi</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		
+		<!--List Item 3------------->
+			<div class="list_item overflow">
+				<a href="property_details.html">
+					<div class="item_box overflow">
+						<div class="item_box_upper overflow">
+							<div class="item_upper item_category">
+								<p>Flat/Appertment</p>
+							</div>
+							<div class="item_upper item_pricebox overflow">
+								<div class="item_upper_left">
+									<p><i class="fa-solid fa-dollar-sign"></i><span>8000/month</span></p>
+								</div>
+								<div class="item_upper_left item_wlist_icon">
+									<p><i class="fa-solid fa-heart"></i></p>
+								</div>
+							</div>
+						</div>
+						<div class="list_img overflow">
+							<img src="https://btibd.com/wp-content/uploads/2023/03/city-pointe-328773.webp" alt="property image">
+						</div>
+						<div class="item_box_lower overflow"> 
+							<p>Karim Mansion</p>
+							<h3><i class="fa-brands fa-accusoft"></i><span>Flat/Appertment</span></h3>
+							<p><i class="fa-solid fa-file-pen"></i>Posted on: March 3, 2022</p>
+							<p><i class="fa-solid fa-dollar-sign"></i>8000/mo <span>(Negotiable)</span></p>
+							<p><i class="fa-solid fa-location-dot"></i>Dhaka - Banaree</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		
+		<!--List Item 4------------->
+			<div class="list_item overflow">
+				<a href="property_details.html">
+					<div class="item_box overflow">
+						<div class="item_box_upper overflow">
+							<div class="item_upper item_category">
+								<p>Flat/Appertment</p>
+							</div>
+							<div class="item_upper item_pricebox overflow">
+								<div class="item_upper_left">
+									<p><i class="fa-solid fa-dollar-sign"></i><span>8000/month</span></p>
+								</div>
+								<div class="item_upper_left item_wlist_icon">
+									<p><i class="fa-solid fa-heart"></i></p>
+								</div>
+							</div>
+						</div>
+						<div class="list_img overflow">
+							<img src="data:image/jpeg;base64,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" alt="property image">
+						</div>
+						<div class="item_box_lower overflow"> 
+							<p>Peace vila</p>
+							<h3><i class="fa-brands fa-accusoft"></i><span>Flat/Appertment</span></h3>
+							<p><i class="fa-solid fa-file-pen"></i>Posted on: March 3, 2022</p>
+							<p><i class="fa-solid fa-dollar-sign"></i>8000/mo <span>(Negotiable)</span></p>
+							<p><i class="fa-solid fa-location-dot"></i>Dhaka - Dhanmondi</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		
+		<!--List Item 5------------->
+			<div class="list_item overflow">
+				<a href="property_details.html">
+					<div class="item_box overflow">
+						<div class="item_box_upper overflow">
+							<div class="item_upper item_category">
+								<p>Flat/Appertment</p>
+							</div>
+							<div class="item_upper item_pricebox overflow">
+								<div class="item_upper_left">
+									<p><i class="fa-solid fa-dollar-sign"></i><span>8000/month</span></p>
+								</div>
+								<div class="item_upper_left item_wlist_icon">
+									<p><i class="fa-solid fa-heart"></i></p>
+								</div>
+							</div>
+						</div>
+						<div class="list_img overflow">
+							<img src="images/1.jpg" alt="property image">
+						</div>
+						<div class="item_box_lower overflow"> 
+							<p>avro mansion</p>
+							<h3><i class="fa-brands fa-accusoft"></i><span>Flat/Appertment</span></h3>
+							<p><i class="fa-solid fa-file-pen"></i>Posted on: March 3, 2022</p>
+							<p><i class="fa-solid fa-dollar-sign"></i>8000/mo <span>(Negotiable)</span></p>
+							<p><i class="fa-solid fa-location-dot"></i>Dhaka - Dhanmondi</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		
+		<!--List Item 6------------->
+			<div class="list_item overflow">
+				<a href="property_details.html">
+					<div class="item_box overflow">
+						<div class="item_box_upper overflow">
+							<div class="item_upper item_category">
+								<p>Flat/Appertment</p>
+							</div>
+							<div class="item_upper item_pricebox overflow">
+								<div class="item_upper_left">
+									<p><i class="fa-solid fa-dollar-sign"></i><span>8000/month</span></p>
+								</div>
+								<div class="item_upper_left item_wlist_icon">
+									<p><i class="fa-solid fa-heart"></i></p>
+								</div>
+							</div>
+						</div>
+						<div class="list_img overflow">
+							<img src="https://static.clickbd.com/global/classified/item_img/2495172_0_original.jpg" alt="property image">
+						</div>
+						<div class="item_box_lower overflow"> 
+							<p>Green vila</p>
+							<h3><i class="fa-brands fa-accusoft"></i><span>Flat/Appertment</span></h3>
+							<p><i class="fa-solid fa-file-pen"></i>Posted on: March 3, 2022</p>
+							<p><i class="fa-solid fa-dollar-sign"></i>8000/mo <span>(Negotiable)</span></p>
+							<p><i class="fa-solid fa-location-dot"></i>Dhaka - Dhanmondi</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		
+		<!--List Item 7------------->
+			<div class="list_item overflow">
+				<a href="property_details.html">
+					<div class="item_box overflow">
+						<div class="item_box_upper overflow">
+							<div class="item_upper item_category">
+								<p>Flat/Appertment</p>
+							</div>
+							<div class="item_upper item_pricebox overflow">
+								<div class="item_upper_left">
+									<p><i class="fa-solid fa-dollar-sign"></i><span>8000/month</span></p>
+								</div>
+								<div class="item_upper_left item_wlist_icon">
+									<p><i class="fa-solid fa-heart"></i></p>
+								</div>
+							</div>
+						</div>
+						<div class="list_img overflow">
+							<img src="https://btibd.com/wp-content/uploads/2023/03/city-pointe-556392.webp" alt="property image">
+						</div>
+						<div class="item_box_lower overflow"> 
+							<p>Nafiz mansion</p>
+							<h3><i class="fa-brands fa-accusoft"></i><span>Flat/Appertment</span></h3>
+							<p><i class="fa-solid fa-file-pen"></i>Posted on: March 3, 2022</p>
+							<p><i class="fa-solid fa-dollar-sign"></i>8000/mo <span>(Negotiable)</span></p>
+							<p><i class="fa-solid fa-location-dot"></i>Dhaka - Dhanmondi</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		
+		<!--List Item 8------------->
+			<div class="list_item overflow">
+				<a href="property_details.html">
+					<div class="item_box overflow">
+						<div class="item_box_upper overflow">
+							<div class="item_upper item_category">
+								<p>Flat/Appertment</p>
+							</div>
+							<div class="item_upper item_pricebox overflow">
+								<div class="item_upper_left">
+									<p><i class="fa-solid fa-dollar-sign"></i><span>8000/month</span></p>
+								</div>
+								<div class="item_upper_left item_wlist_icon">
+									<p><i class="fa-solid fa-heart"></i></p>
+								</div>
+							</div>
+						</div>
+						<div class="list_img overflow">
+							<img src="https://garibaree.com/baree/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-06-at-3.43.25-PM-1-1170x785.jpg" alt="property image">
+						</div>
+						<div class="item_box_lower overflow"> 
+							<p>Shishir Mansion</p>
+							<h3><i class="fa-brands fa-accusoft"></i><span>Flat/Appertment</span></h3>
+							<p><i class="fa-solid fa-file-pen"></i>Posted on: March 3, 2022</p>
+							<p><i class="fa-solid fa-dollar-sign"></i>8000/mo <span>(Negotiable)</span></p>
+							<p><i class="fa-solid fa-location-dot"></i>Dhaka - Dhanmondi</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		
+		<!--List Item 9------------->
+			<div class="list_item overflow">
+				<a href="property_details.html">
+					<div class="item_box overflow">
+						<div class="item_box_upper overflow">
+							<div class="item_upper item_category">
+								<p>Flat/Appertment</p>
+							</div>
+							<div class="item_upper item_pricebox overflow">
+								<div class="item_upper_left">
+									<p><i class="fa-solid fa-dollar-sign"></i><span>8000/month</span></p>
+								</div>
+								<div class="item_upper_left item_wlist_icon">
+									<p><i class="fa-solid fa-heart"></i></p>
+								</div>
+							</div>
+						</div>
+						<div class="list_img overflow">
+							<img src="https://www.assuregroupbd.com/images/properties/properties-details/assure-barakah-overview.jpg" alt="property image">
+						</div>
+						<div class="item_box_lower overflow"> 
+							<p>Anu mainsion</p>
+							<h3><i class="fa-brands fa-accusoft"></i><span>Flat/Appertment</span></h3>
+							<p><i class="fa-solid fa-file-pen"></i>Posted on: March 3, 2022</p>
+							<p><i class="fa-solid fa-dollar-sign"></i>8000/mo <span>(Negotiable)</span></p>
+							<p><i class="fa-solid fa-location-dot"></i>Dhaka - Dhanmondi</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		
+		<!--List Item 10------------->
+			<div class="list_item overflow">
+				<a href="property_details.html">
+					<div class="item_box overflow">
+						<div class="item_box_upper overflow">
+							<div class="item_upper item_category">
+								<p>Flat/Appertment</p>
+							</div>
+							<div class="item_upper item_pricebox overflow">
+								<div class="item_upper_left">
+									<p><i class="fa-solid fa-dollar-sign"></i><span>8000/month</span></p>
+								</div>
+								<div class="item_upper_left item_wlist_icon">
+									<p><i class="fa-solid fa-heart"></i></p>
+								</div>
+							</div>
+						</div>
+						<div class="list_img overflow">
+							<img src="images/1.jpg" alt="property image">
+						</div>
+						<div class="item_box_lower overflow"> 
+							<p>Green villa</p>
+							<h3><i class="fa-brands fa-accusoft"></i><span>Flat/Appertment</span></h3>
+							<p><i class="fa-solid fa-file-pen"></i>Posted on: March 3, 2022</p>
+							<p><i class="fa-solid fa-dollar-sign"></i>8000/mo <span>(Negotiable)</span></p>
+							<p><i class="fa-solid fa-location-dot"></i>Dhaka - Dhanmondi</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		<div class="browse_list_button">
+			<a href="property_list.html"><button class="btn_success btn_browse">browse list</button></a>
+		</div>
+	</div>
+	
+<!--Property List Section End------------->	
+
+
+<!--Popular Category Section Start------------->	
+
+<div class= "list overflow">
+		<h1 class="sub-title">popular category</h1>
+		<div class="list_content">
+		
+		<!--Category 1------------->
+			<div class="list_item popular_category overflow">
+				<div class="item_box overflow">
+					<a href="property_by_cat.html">
+						<div class="popular_cat_heading">
+							<p>category</p>
+						</div>
+						<div class="popular_cat_img">
+							<img src="images/banner.jpg"/>
+							<div class="popular_cat_text">
+								<p>Flat/Appertment</p>
+								<p>534 Property ads</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+		<!--Category 2------------->
+			<div class="list_item popular_category overflow">
+				<div class="item_box overflow">
+					<a href="property_by_cat.html">
+						<div class="popular_cat_heading">
+							<p>category</p>
+						</div>
+						<div class="popular_cat_img">
+							<img src="images/1.jpg"/>
+							<div class="popular_cat_text">
+								<p>mess/hostel</p>
+								<p>56 Property ads</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+		<!--Category 2------------->
+			<div class="list_item popular_category overflow">
+				<div class="item_box overflow">
+					<a href="property_by_cat.html">
+						<div class="popular_cat_heading">
+							<p>category</p>
+						</div>
+						<div class="popular_cat_img">
+							<img src="images/1.jpg"/>
+							<div class="popular_cat_text">
+								<p>mess/hostel</p>
+								<p>56 Property ads</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!--Popular Category Section End------------->	
+
+
+<!--About Us Section Start------------->
+	<div class="about"> 
+		<h1 class="sub-title">About Us</h1>
+		<div class="about_text">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium suscipit eros, congue suscipit neque. Cras eu ultrices orci. Praesent accumsan tempus faucibus. Praesent nec nibh scelerisque, tristique odio non, maximus risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse eget eros nunc. Pellentesque eu laoreet est. Phasellus hendrerit condimentum felis, in feugiat nibh sodales vitae. Sed nec tellus pretium, faucibus ex eget, pulvinar neque. Vestibulum nisi nisi, rhoncus quis pretium maximus, bibendum non massa.</p>
+		</div>
+	</div>
+
+<!--About Us Section End------------->
+
+
+<!--Contact Section Start------------->
+	<div class="contact">
+		<form action="" method="post">
+			<h1 class="sub-title">Get In Touch</h1>
+			<div class="contact_body overflow">
+				<div class="contact_part">
+				  <label for="name"><b>Name:</b></label>
+				  <input type="text" placeholder="Enter name" name="name" id="name" required><br><br><br>
+				  
+				  <label for="email"><b>Mobile No:</b></label>
+				  <input type="text" placeholder="Enter Mobile No" name="email" id="email" required><br><br><br>
+				  
+				  <label for="email"><b>Email:</b></label>
+				  <input type="text" placeholder="Enter Email" name="email" id="email" required><br><br><br>
+				</div>
+			
+				<div class="contact_part">
+				  <label for="name"><b>Message:</b></label>
+				  <textarea placeholder="Type your message" name="message"></textarea>
+				</div>
+			</div>
+			<div class="contact_button">
+				<button class="btn_success" type="submit">Send</button>
+			</div>
+		</form>
+	</div>
+
+<!--Contact Section End------------->
+	</div>
+	</div>
+	
+
+<!--Footer Section Start------------->		
+	<footer class="footersection overflow">
+		<div class="footer-top overflow">
+			<div class="footer_top_upper overflow">
+			<!--Footer content 1------------->
+				<div class="footer_content">
+					<h2>about us</h2>
+					<div class="footer_text overflow">
+						<div class="text_icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+						<div class="text_body">
+							<h3>address</h3>
+							<p>Dhanmondi, Dhaka</p>
+						</div>
+					</div>
+					
+					<div class="footer_text overflow">
+						<div class="text_icon">
+							<i class="fa-solid fa-envelopes-bulk"></i>
+						</div>
+						<div class="text_body">
+							<h3>for any question</h3>
+							<p>houserental@gmail.com</p>
+						</div>
+					</div>
+					
+					<div class="footer_text overflow">
+						<div class="text_icon">
+							<i class="fa-solid fa-mobile-screen"></i>
+						</div>
+						<div class="text_body">
+							<h3>help & support</h3>
+							<p>01232-231324</p>
+						</div>
+					</div>
+				</div>
+			
+			<!--Footer content 2------------->	
+				<div class="footer_content">
+					<h2>recent property</h2>
+					<div class="footer_text">
+						<a href="property_details.html">
+							<div class="footer_property overflow">
+								<div class="text_icon text_img">
+									<img src="images/1.jpg" alt="property"/>
+								</div>
+								<div class="text_body">
+									<p>Property title here</p>
+									<p>March 3, 2022</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					
+					<div class="footer_text">
+						<a href="property_details.html">
+							<div class="footer_property overflow">
+								<div class="text_icon text_img">
+									<img src="images/1.jpg" alt="property"/>
+								</div>
+								<div class="text_body">
+									<p>Property title here</p>
+									<p>March 3, 2022</p>
+								</div>
+							</div>
+						</a>
+					</div>
+					
+					<div class="footer_text">
+						<a href="property_details.html">
+							<div class="footer_property overflow">
+								<div class="text_icon text_img">
+									<img src="images/1.jpg" alt="property"/>
+								</div>
+								<div class="text_body">
+									<p>Property title here</p>
+									<p>March 3, 2022</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			
+			<!--Footer content 3------------->
+				<div class="footer_content">
+					<h2>quick links</h2>
+					<div class="footer_text">
+						<nav class="footer_nav">
+							<ul>
+								<li><a href="property_list.html">list of property &raquo;</a></li>
+								<li><a href="Admin/add_property.html">post property &raquo;</a></li>
+								<li><a href="help_support.html">help & support &raquo;</a></li>
+								<li><a href="signup.html">signup &raquo;</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>	
+			</div>
+		
+		<!--Footer social links------------->	
+			<div class="footer_top_lower">
+				<nav class="footer_social">
+					<ul>
+						<li><a href=""><p class="fb"><i class="fa-brands fa-facebook-f"></i></p></a></li>
+						<li><a href=""><p class="tw"><i class="fa-brands fa-twitter"></i></p></a></li>
+						<li><a href=""><p class="gp"><i class="fa-brands fa-google-plus-g"></i></p></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<p>&copy; 2022. All Rights Reserved</p>
+		</div>
+	</footer>
+<!--Footer Section End------------->
+
+<!--Script for responsive navbar Start------------>
+<script>
+	var navList = document.getElementById("navList");
+	function togglebtn(){
+		navList.classList.toggle("hidemenu");
+	}
+	
+	var dashboardNav = document.getElementById("dashboardNav");
+	function togglebtn_dashboard(){
+		dashboardNav.classList.toggle("hide_dashboard_menu");
+	}
+</script>
+<!--Script for responsive navbar End------------>
+
+<!--JavaScript File for Slick Slider Start------------>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+
+<!-- Slick Slider Javascript cdn ---->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--JavaScript File for Slick Slider End------------>
+
+<!--Script for Slick Slider Start------------>
+<script type="text/javascript">
+	$('.slider').slick({
+  dots: true,
+  infinite: true,
+  autoplay: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+	{
+      breakpoint: 773,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+</script>
+<!--Script for Slick Slider End------------>
+</body>
+</html>
